@@ -22,8 +22,9 @@ Planeé que el proyecto esté organizado por capítulos para facilitar la navega
 
 | Capítulo | Título | Estado | Notas |
 | :--- | :--- | :---: | :---: |
-| 01 | Getting Started | En progreso | [Ver notas](./capitulo_01/notas_capitulo_1.md) |
-| 02 | Variables and Simple Data Types | ⏳ | [Ver notas](./capitulo_02/notas.md) |
+| 01 | Getting Started | Comlpetado | [Ver notas](./capitulo_01/notas_capitulo_1.md) |
+| 02 | Variables and Simple Data Types | Completado | [Ver notas](./capitulo_02/notas.md) |
+| 03 | Introducing Lists | En progreso | [Ver notas](./capitulo_03/notas.md) |
 |
 
 ---

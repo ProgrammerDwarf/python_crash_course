@@ -74,7 +74,65 @@ En resumen, las cadenas de caracteres son un tipo de dato fundamental en Python 
 
 Los números enteros (integers) son aquellos que no tienen parte decimal, mientras que los números de punto flotante (floats) son aquellos que sí tienen una parte decimal. En Python, ambos tipos de datos se pueden manipular utilizando operadores aritméticos básicos como suma (+), resta (-), multiplicación (*), división (/), división entera (//), módulo (%) y potencia (**).
 
+### Ejemplos de operaciones:
+- Suma: 2 + 2
+- Resta: 2 - 5
+- Multiplicación: 5 * 9
+- División: 6 / 2
+- División entera: 7 // 2
+- Exponenciación: 3 ** 4
+
+Una de las cosas que hay que tomar en cuenta es el orden de prioridad en las operaciones matemáticas. Python se alinea con el acrónimo PEMDAS, que representa: Paréntesis, Exponenciación, multiplicación, división, adición y sustracción. Recuerda que en caso de encontrase 2 operaciones iguales se evalúa primero barriendo la operación completa desde la izquierda.
+
 También se pueden convertir entre estos dos tipos de datos utilizando las funciones integradas `int()` y `float()`. Por ejemplo, `int(3.7)` devolverá `3`, mientras que `float(5)` devolverá `5.0`.
 
 Se explica un truco para tener mejor legibilidad al trabajar con números grandes, que es usar guiones bajos (_) para separar los dígitos. Por ejemplo, en lugar de escribir `1000000`, se puede escribir `1_000_000`, lo que hace que sea más fácil de leer.
 
+### Asignación múltiple
+
+Python tiene algo muy útil y es el 'desempaquetado de iterables', con él, podemos hacer cosas grandiosas como hacer el cambio de variables. Por ejemplo:
+
+```python
+x , y = y , x
+
+# O también
+x , y, z = 0, 1 , 2
+```
+Aquí lo que pasa por detrás de estas expresiones es un proceso de 3 pasos:
+
+1. Evaluación de la Derecha:
+
+Antes de asignar nada, Python evalúa todo lo que está a la derecha del signo "=". En el caso de 0, 0, 0, aunque no veas paréntesis, Python lo interpreta como una tupla. En memoria, se crea temporalmente un objeto contenedor (una tupla) que contiene los tres valores: (0, 1, 2).
+
+2. El Desempaquetado (Unpacking):
+
+Una vez que la tupla está lista, Python mira cuántas "etiquetas" (variables) hay a la izquierda. El intérprete extrae los elementos de la tupla uno por uno siguiendo el orden de izquierda a derecha. El primer 0 se prepara para x, el segundo número para y, y el tercero para z.
+
+3. Asignación Atómica:
+
+Finalmente, se realizan las asignaciones de los nombres a las direcciones de memoria de esos valores.
+
+Otra cosa interesante es que Python por defecto no maneja el concepto de CONSTANTES. De hecho, se recurre a una convención para escribir una variable que debería comportarse y manejarse como constante pero no está sujeta a evaluación por parte del interprete de Python. 
+
+Imaginemos que tenemos un máximo de intentos antes de que se bloquee la cuenta dentro de un login. Podríamos tener una constante tal que:
+
+```python
+MAX_ATTEMPS = 3
+```
+
+Por último, tenemos los comentarios que son notaciones valiosas que podemos dejar en nuestro código para dejarlo lo más comentado posible. Hay algo que existe dentro de la comunidad de Python que se llama: "Zen de Python". Esto es un conjunto de pensamientos y filosofía dentro del lenguaje que terminan siendo las buenas prácticas del lenguaje. Como por ejemplo: el código debe ser lo más limpio y autodocumentado posible pero en situaciones nuestra solución podría no entenderse al 100% todo el tiempo y allí en donde los comentarios brillan, ya que son un soporte más para el trabajo colaborativo.
+
+Para comentar el código basta con escribir "#" y seguido de este símbolo, la nota que queremos dejar.
+
+```python
+# Este es un comentario
+print('Arriba hay un comentario aunque no lo ves')
+```
+
+Cabe destacar que los comentarios no se ven cuando se ejecuta el código, simplemente son notaciones dentro de nuestro editor de código.
+
+*Ejercicios propuestos*:
+- 2-9. *Number whatever:* Consigue el mismo resultado empleando las distintas operaciones aritméticas usando Python. Procura que el resultado en la terminal tenga el mismo número tantas veces como operaciones distintas hayas hecho.
+- 2-10. *Numero de la suerte:* Crea una variable que represente el número de la suerte y muéstralo en pantalla.
+- 2-11.*Agrega comentario:* Agrega comentarios a los 2 programas que has hecho en la parte matemática.
+- 2-12.*Culebra Zen:* Crea un archivo nuevo e importa el zen de python para que sea mostrado en consola. Importa la librería "this"   

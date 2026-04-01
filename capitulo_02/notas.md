@@ -2,7 +2,7 @@
 
 En este capítulo se introducen los conceptos de variables y tipos de datos en Python. Se explica cómo crear variables para almacenar información y cómo asignar valores a estas variables. Además, se presentan los diferentes tipos de datos que existen en Python; empezando por las cadenas de caracteres (strings), números enteros (integers) y números de punto flotante (floats). 
 
-Una parte que me pareció sumamente interesando fue la explicación sobre cómo ver a las variables, aquí el autor desmonta el ejemplo clásico de la caja con una etiqueta, y lo reemplaza por una metáfora más cercana a la realidad, que es la de un nombre que apunta a un valor en la memoria. Esto ayuda a entender mejor cómo funcionan las variables en Python y cómo se relacionan con los tipos de datos.
+Una parte que me pareció sumamente interesante fue la explicación sobre cómo ver a las variables, aquí el autor desmonta el ejemplo clásico de la caja con una etiqueta, y lo reemplaza por una metáfora más cercana a la realidad, que es la de un nombre que apunta a un valor en la memoria. Esto ayuda a entender mejor cómo funcionan las variables en Python y cómo se relacionan con los tipos de datos.
 
 Resulta que cada vez que nombramos a una variable, lo que realmente estamos haciendo es crear una referencia a un valor en la memoria, y no una caja que contiene ese valor. Esto significa que si asignamos un nuevo valor a una variable que ya existía, por ejemplo: `nombre = "Reinid"` y luego `nombre = "Jenesis"`, lo que sucede es que la variable `nombre` ahora apunta a un nuevo valor en la memoria, y el valor anterior ("Reinid") queda sin referencia, lo que eventualmente puede ser limpiado por el recolector de basura de Python.
 
